@@ -1,0 +1,27 @@
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .gradient {
+    --size: 50px;
+    --speed: 30s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 1.0));
+    background-image: linear-gradient(hsl(158, 82, 57, 95%), hsl(252, 82, 57));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 60% 70% 70% 30% / 60% 60% 70% 70%;
+  }
+  
+  @media (min-width: 1080px) {
+    .gradient {
+      --size: 500px;
+    }
+  }
+  
