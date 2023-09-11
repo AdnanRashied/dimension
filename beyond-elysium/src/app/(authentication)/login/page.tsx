@@ -19,6 +19,10 @@ const LoginPage: React.FC = () => {
 
   const handleSubmit = async (event: FormEvent): Promise<void> => {
     event.preventDefault();
+    const formDataLowercased = {
+      email: formData.email.toLowerCase(),
+      password: formData.password,
+    };
 
     try {
       const response = await fetch('api/controller/login', {
@@ -26,9 +30,9 @@ const LoginPage: React.FC = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formDataLowercased),
       });
-
+  
       if (response.status === 200) {
         console.log('Login successful');
       } else {

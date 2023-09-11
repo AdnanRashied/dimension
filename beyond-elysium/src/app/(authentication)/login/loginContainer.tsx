@@ -4,9 +4,9 @@ import LoginPageBackground from "@styles/LoginPageBackground.module.scss";
 import { FormField } from "@components/Form-Field";
 
 interface LoginContainerBoxProps {
-  value: { email: string; password: string };
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => void;
+  value: { email: string; password: string };
   emailError?: string;
   passwordError?: string;
 }
@@ -36,7 +36,7 @@ export const LoginContainerBox = ({
   const defaultImage = "/giphy.gif"; 
 
   const imageUrl = displayError ? errorImage : defaultImage;
-
+  
   return (
     <>
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black absolute flex items-center overflow-hidden place-content-center inset-0 no-rotate">
@@ -59,7 +59,7 @@ export const LoginContainerBox = ({
               value={value.email}
               onChange={onChange}
               type="email"
-              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}|[a-zA-Z0-9._%+-]{6,}"
+              pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}|[a-zA-Z0-9._%+-]{6,}"
               required
               placeHolder="Enter Email Address"
               size={30}
