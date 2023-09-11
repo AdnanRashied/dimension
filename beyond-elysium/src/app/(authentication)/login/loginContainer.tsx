@@ -42,7 +42,6 @@ export const LoginContainerBox = ({
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-black to-black absolute flex items-center overflow-hidden place-content-center inset-0 no-rotate">
         <div className={LoginPageBackground.gradient} />
       </div>
-
       <div className="flex items-center justify-center min-h-screen">
         <div className="p-10 bg-black bg-opacity-25 rounded-lg shadow-lg backdrop-filter backdrop-blur-xl w-96">
           <form className="flex flex-col items-center space-y-3 md:space-y-3" onSubmit={onSubmit}>
