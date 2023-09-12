@@ -22,7 +22,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@authentication/*": ["./src/app/(authentication)/*"],
+      "@components/*":["./src/app/components/*"],
+      "@styles/*":["./src/styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
