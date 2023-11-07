@@ -25,7 +25,9 @@
       "@/*": ["./src/*"],
       "@authentication/*": ["./src/app/(authentication)/*"],
       "@components/*":["./src/app/components/*"],
-      "@styles/*":["./src/styles/*"]
+      "@styles/*":["./src/styles/*"],
+      "@prisma/*":["./prisma/*"],
+      "@interface/*":["./src/interface/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
